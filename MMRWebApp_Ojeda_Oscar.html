@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	
+	<link rel="stylesheet" href="MMRWebApp_Ojeda_Oscar.css">
+</head>
+<body onload="initial()">
+	<h1 class="center">Retirement Calculator</h1>
+	<hr>
+	<form id="inputFormId">
+		<table id="inputTableId" 
+		class="center-col" 
+		> 
+			<tr>
+				<td>
+					<input 	id="startingAgeId" type="number" 
+							value="25" min="0" max="9999999" step="any"
+							placeholder="Starting Age" required>
+				</td>
+				<td class="inputTableLabels"></td>
+				<td>
+					<input 	id="retirementAgeId" type="number"
+							value="65" min="0" max="90" step="any"
+							placeholder="Retirement Age" required>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					<input 	id="startingSalaryId" type="number" 
+							value="50000" min="20000" max="999999" step="any"
+							placeholder="Starting Salary" required>
+				</td>
+				<td class="inputTableLabels"></td>
+				<td>
+					<input 	id="annualSavingsId" type="number"
+							value="10.0" min="0.0" max="100.0" step="any"
+							placeholder="Annual Savings" required>
+				</td>
+			</tr>
+            
+				<td>
+					<input 	id="annualRaiseId" type="number"
+							value="2.0" min="0.0" max="100.0" step="any"
+							placeholder="Annual Raise%" required>
+				</td>
+				<td class="inputTableLabels"></td>
+				<td>
+					<input 	id="interestRateId" type="number"
+							value="7.0" min="0.0" max="100.0" step="0.01"
+							placeholder="Interest Rate%" required>
+				</td>
+			</tr>
+			
+		</table>
+
+		<!-- mmr and def were the last name classes -->
+
+		<div id="buttonDivId" class="center-row">
+		
+			<div id="defId">
+				<button type="button" onclick="clearInput(this.form)">
+                 	Clear 
+                </button>
+			
+				<button type="button" onclick="loadDefaults(this.form)">
+                 Defaults
+                 </button>
+			</div>
+				 
+				
+				<div id="mmr">
+				<button type="button" onclick="runComparison(this.form)">
+                 	Make Me Rich!
+                </button>
+			
+			</div>
+		</div>
+	</form>
+
+    <br>
+
+	<table class="center-col" id="summaryTableId">
+		<tr>
+		  <td
+			class="summaryTableValue"
+			id="yearsId"
+		  ></td>
+		  <td class="summaryTableLabel">
+			Years To Invest
+		  </td>
+		</tr>
+		<tr>
+		  <td
+			class="summaryTableValue"
+			id="retirementFundId"
+		  ></td>
+		  <td class="summaryTableLabel">
+			Retirement Fund
+		  </td>
+		</tr>
+		<tr>
+		  <td
+			class="summaryTableValue"
+			id="lifetimeSalaryId"
+		  ></td>
+		  <td class="summaryTableLabel">
+			Lifetime Salary
+		  </td>
+		</tr>
+		<tr>
+		  <td
+			class="summaryTableValue"
+			id="totalSavedId"
+		  ></td>
+		  <td class="summaryTableLabel">
+			Total Saved
+		  </td>
+		</tr>
+		<tr>
+		  <td
+			class="summaryTableValue"
+			id="interestEarnedId"
+		  ></td>
+		  <td class="summaryTableLabel">
+			Earned Interest
+		  </td>
+		</tr>
+	  </table>
+	   
+	  <table class="center-col" id="resultsTableId">
+		<thead>
+		  <tr>
+			<td>Age</td>
+			<td>Salary</td>
+			<td>Savings</td>
+			<td>Interest</td>
+			<td>Retirement</td>
+		  </tr>
+		</thead>
+		<tbody id="tableResults"></tbody>
+	  </table>
+
+	<hr>
+
+<!-- 
+	<div id="resultsId" class="center">
+		<table id="summaryResultsId" class="summaryTable">
+			
+			<tr><td><th>Years to invest</th><td>  
+			<tr><th>Retirement Fund</th><td>   
+            <tr><th>Lifetime Salary</th><td> 
+            <tr><th>Total saved     </th><td>   
+            <tr><th>Earned Interest     </th><td> 
+                         
+                          
+		</table> -->
+
+		
+        <!-- <div id="resultsTablesId" class="center">
+ 		    <table id="resultsTablesId" class="center" type="number">
+                <tr><th>Age </th><th>Salary </th><th>Savings </th><th>Interest </th><th>Retirement </th></tr>
+                <tr><td>     25</td><td>       50,000</td><td>      5,000</td><td>        350</td><td>      5,350</td></tr>      
+                <tr><td>     26</td><td>       51,000</td><td>      5,100</td><td>        732</td><td>      11,182</td></tr>      
+                <tr><td>     27</td><td>       52,020</td><td>      5,202</td><td>        1,147</td><td>      17,530</td></tr>      
+                <tr><td>     28</td><td>       53,060</td><td>      5,306</td><td>        1,599</td><td>      24,435</td></tr>      
+                <tr><td>     29</td><td>       54,122</td><td>      5,412</td><td>        2,089</td><td>      31,936</td></tr>      
+                <tr><td>     61</td><td>       101,994</td><td>     10,199</td><td>       71,001</td><td>      1,473,440</td></tr>       -->
+
+		    <!-- </table>
+        </div> --> 
+
+	<!-- </div> -->
+<script type="text/javascript" src="./FormattingTools.js"></script>
+<script type="text/javascript" src="./MMRWebApp_Ojeda_Oscar.js"></script>
+
+	
+</body>
+
+
+</html>
+

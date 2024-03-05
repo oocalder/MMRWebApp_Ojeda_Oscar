@@ -1,0 +1,131 @@
+/*General Styling*/
+
+body {
+    font-family:  		sans-serif;
+    font-size: 			24px;
+    }
+h1 {
+    margin-top: left;
+
+}
+
+
+
+/* for columns and rows */
+
+.center-col {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+.center-row {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: auto;
+    
+  }
+
+
+.center {
+    background-color: white;
+    margin:  			auto;
+    display: 			table;
+}
+
+
+input[type=number] {
+    text-align: 		right;
+    font-family: 		monospace;
+    font-size: 			1.0em;
+    width: 				8em;
+}
+
+button:hover,
+button:focus {
+    border: 2px solid blueviolet; 
+}
+
+
+
+
+/* For all Buttons*/
+
+  .button {
+    grid-column: 1;
+    
+  }
+/*Clear and Default button: Grid layout*/
+#defId {
+    display: flex;
+    margin: 			2.5px;
+    width: 10.5em;
+    font-size: 			.8em;
+    height: 30px;
+    justify-content: flex-end; /* Aligns children (buttons) to the right */
+    gap: 0.5em; 
+}
+
+
+
+/*mmr = Make ME Rich button */
+#mmr {
+    margin: 			2.5px;
+    width: 10.5em;
+    font-size: 			.8em;
+    height: 30px
+    
+}
+
+#mmr > button {
+    width: 12rem;
+    height: 30px
+    
+
+}
+
+input:invalid 			{ border: 2px solid #A00000; }
+input:valid 			{ border: 2px solid #00A000; }
+input:focus:invalid 	{ color: red; }
+input:focus:valid 		{ color: blue; }
+
+.resultsTable[type=number] {
+    text-align: 		right;
+    font-family: 		monospace;
+    font-size: 			1.0em;
+    width: 				50%;
+}
+
+
+
+.summaryTable {
+width: 100%; 
+border-collapse: collapse; 
+}
+
+
+
+.summaryTable td {
+font-family: monospace; 
+text-align: right; 
+}
+
+
+.summaryTable th {
+text-align: left;
+font-weight: normal;
+}
+
+
+#resultsTableId{
+    width: 52%;
+    background-color: beige;
+    margin-top: 2rem;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    
+ 
+ 
+}
+
